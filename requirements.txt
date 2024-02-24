@@ -3,7 +3,8 @@ langchain
 langchain-community
 streamlit
 streamlit_chat
-chromadb==0.3.29
+sqlite3==0.35.0
+chromadb
 openai 
 PyPDF2
 black
