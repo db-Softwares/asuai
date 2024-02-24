@@ -8,4 +8,4 @@ openai
 PyPDF2
 black
 tiktoken
-pysqlite3-binary
+pysqlite3
