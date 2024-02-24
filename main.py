@@ -8,16 +8,42 @@ from langchain.cache import SQLiteCache
 from langchain.chains import ConversationalRetrievalChain, RetrievalQA
 from langchain.chains.question_answering import load_qa_chain
 from langchain.chat_models import ChatOpenAI
-from langchain.document_loaders import TextLoader
+from langchain.document_loaders import Docx2txtLoader, PyPDFLoader, TextLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import (
     CharacterTextSplitter,
     RecursiveCharacterTextSplitter,
 )
 from langchain.vectorstores import Chroma
+from langchain_community.document_loaders.csv_loader import CSVLoader
 from streamlit_chat import message
 
 from load_docs import load_docs
+
+
+@st.cache_data()
+def load_docs():
+    documents = []
+    for file in os.listdir("docs"):
+        if file.endswith(".pdf"):
+            pdf_path = "./docs/" + file
+            loader = PyPDFLoader(pdf_path)
+            documents.extend(loader.load())
+        elif file.endswith(".docx") or file.endswith(".doc"):
+            doc_path = "./docs/" + file
+            loader = Docx2txtLoader(doc_path)
+            documents.extend(loader.load())
+        elif file.endswith(".txt"):
+            text_path = "./docs/" + file
+            loader = TextLoader(text_path, encoding="utf-8")
+            documents.extend(loader.load())
+        elif file.endswith(".csv"):
+            csv_path = "./docs/" + file
+            loader = CSVLoader(csv_path)
+            documents.extend(loader.load())
+
+    return documents
+
 
 # load_dotenv("../.env")
 # api_key = os.environ.get("OPENAI_API_KEY")
