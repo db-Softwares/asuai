@@ -8,3 +8,4 @@ openai
 PyPDF2
 black
 tiktoken
+sqlite3==3.35.0
