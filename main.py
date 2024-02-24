@@ -42,11 +42,11 @@ def load_docs():
             text_path = os.path.join(base_dir, "docs", file)
             loader = TextLoader(text_path, encoding="utf-8")
             documents.extend(loader.load())
-        elif file.endswith(".csv"):
-            # csv_path = "./docs/" + file
-            csv_path = os.path.join(base_dir, "docs", file)
-            loader = CSVLoader(csv_path)
-            documents.extend(loader.load())
+        # elif file.endswith(".csv"):
+        #     # csv_path = "./docs/" + file
+        #     csv_path = os.path.join(base_dir, "docs", file)
+        #     loader = CSVLoader(csv_path)
+        #     documents.extend(loader.load())
 
     return documents
 
