@@ -18,7 +18,7 @@ from langchain.vectorstores import Chroma
 from langchain_community.document_loaders.csv_loader import CSVLoader
 from streamlit_chat import message
 
-from load_docs import load_docs
+# from load_docs import load_docs
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
