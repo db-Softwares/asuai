@@ -3,7 +3,6 @@ langchain
 langchain-community
 streamlit
 streamlit_chat
-sqlite3==0.35.0
 chromadb
 openai 
 PyPDF2
