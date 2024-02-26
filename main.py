@@ -124,20 +124,14 @@ qa_chain = ConversationalRetrievalChain.from_llm(
     
 #     st.title("AKSARAY ÜNİVERSİTESİ")
         
-c1, c2, c3, c4, c5 = st.columns(3)
+c1, c2, c3, c4, c5 = st.columns(3)    
 with c1:
     st.write("")
     
 with c2:
-    st.write("")
-    
-with c3:
     st.image("aksaray_uni_logo_mid.png")
     
-with c4:
-    st.write("")
-    
-with c5:
+with c3:
     st.write("")
         
 d1, d2, d3 = st.columns(3)
