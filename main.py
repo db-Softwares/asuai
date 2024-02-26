@@ -111,8 +111,8 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 
 # === Streamlit front-end ===
 with st.sidebar:
-    with st.echo():
-        st.write("AKSARAY ÜNİVERSİTESİ")
+    st.write("AKSARAY ÜNİVERSİTESİ")
+        
         
 st.title("ASÜ AI")
 st.header("Sosyal Bilimler Enstitüsü ile ilgili merak ettiklerinizi sorabilirsiniz...")
