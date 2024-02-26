@@ -111,7 +111,17 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 
 # === Streamlit front-end ===
 with st.sidebar:
-    st.image("aksaray_uni_logo.jpg")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.write(' ')
+    
+    with col2:
+        st.image("aksaray_uni_logo.jpg")
+    
+    with col3:
+        st.write(' ')
+    
     st.title("AKSARAY ÜNİVERSİTESİ")
         
         
