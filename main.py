@@ -110,21 +110,30 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 )
 
 # === Streamlit front-end ===
-with st.sidebar:
-    col1, col2, col3 = st.columns(3)
+# with st.sidebar:
+#     col1, col2, col3 = st.columns(3)
 
-    with col1:
-        st.write(' ')
+#     with col1:
+#         st.write(' ')
     
-    with col2:
-        st.image("aksaray_uni_logo.jpg")
+#     with col2:
+#         st.image("aksaray_uni_logo.jpg")
     
-    with col3:
-        st.write(' ')
+#     with col3:
+#         st.write(' ')
     
-    st.title("AKSARAY ÜNİVERSİTESİ")
+#     st.title("AKSARAY ÜNİVERSİTESİ")
         
-        
+c1, c2, c3 = st.columns(3)
+with c1:
+    st.write("")
+    
+with c2:
+    st.image("aksaray_uni_logo_mid.png")
+    
+with c3:
+    st.write("")
+
 st.title("ASÜ AI")
 st.header("Sosyal Bilimler Enstitüsü ile ilgili merak ettiklerinizi sorabilirsiniz...")
 
