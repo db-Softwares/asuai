@@ -126,12 +126,22 @@ qa_chain = ConversationalRetrievalChain.from_llm(
         
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.image("aksaray_uni_logo_mid.png")
+    st.write("")
     
 with c2:
-    st.title("ASÜ AI")
+    st.image("aksaray_uni_logo_mid.png")
     
 with c3:
+    st.write("")
+        
+d1, d2, d3 = st.columns(3)
+with d1:
+    st.write("")
+    
+with d2:
+    st.title("ASÜ AI")
+    
+with d3:
     st.write("")
 
 
