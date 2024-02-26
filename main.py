@@ -110,7 +110,7 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 )
 
 # === Streamlit front-end ===
-st.image("asu_ai_logo.png")
+st.image("asu_ai_logo_2.png")
 
 
 st.header("Sosyal Bilimler Enstitüsü ile ilgili merak ettiklerinizi sorabilirsiniz...")
