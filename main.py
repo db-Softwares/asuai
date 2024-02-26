@@ -110,8 +110,10 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 )
 
 # === Streamlit front-end ===
+with st.sidebar:
+    st.wtite("Aksaray Üniversitesi")
 st.title("ASÜ AI")
-st.header("🏫 Merak ettiklerinizi sorabilirsiniz...")
+st.header("Sosyal Bilimler Enstitüsü ile ilgili merak ettiklerinizi sorabilirsiniz...")
 
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
