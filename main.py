@@ -126,15 +126,15 @@ qa_chain = ConversationalRetrievalChain.from_llm(
         
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.write("")
+    st.image("aksaray_uni_logo_mid.png")
     
 with c2:
-    st.image("aksaray_uni_logo_mid.png")
+    st.title("ASÜ AI")
     
 with c3:
     st.write("")
 
-st.title("ASÜ AI")
+
 st.header("Sosyal Bilimler Enstitüsü ile ilgili merak ettiklerinizi sorabilirsiniz...")
 
 if "generated" not in st.session_state:
